@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "CreeptoBot": {
+      "commandName": "Project",
+      "commandLineArgs": "--environment Development",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

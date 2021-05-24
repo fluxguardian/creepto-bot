@@ -10,7 +10,6 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.WebSockets;
-using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,7 +19,6 @@ namespace StrategyTester.Exchanges
     public class BinanceApi
     {
         private readonly string _apiAddress;
-        private readonly string _apiSecret;
         private readonly HttpClient _httpClient;
         private readonly ClientWebSocket _webSocketClient;
         private readonly ILogger<BinanceApi> _logger;
@@ -30,7 +28,6 @@ namespace StrategyTester.Exchanges
         public BinanceApi(IOptions<BinanceSettings> options, ILogger<BinanceApi> logger)
         {
             _apiAddress = options.Value.ApiAddress;
-            _apiSecret = options.Value.ApiSecret;
             _httpClient = new HttpClient()
             {
                 BaseAddress = new Uri(_apiAddress)

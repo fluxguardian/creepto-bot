@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\franc\\source\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj": {}
+    "C:\\Users\\francisco\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj": {
+    "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj",
+        "projectUniqueName": "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj",
         "projectName": "CreeptoBot",
-        "projectPath": "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\obj\\",
+        "projectPath": "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj",
+        "packagesPath": "C:\\Users\\francisco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,24 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\franc\\source\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj": {
+    "C:\\Users\\francisco\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\franc\\source\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\francisco\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj",
         "projectName": "TechnicalAnalysis.Tests",
-        "projectPath": "C:\\Users\\franc\\source\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj",
-        "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\franc\\source\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\obj\\",
+        "projectPath": "C:\\Users\\francisco\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\TechnicalAnalysis.Tests.csproj",
+        "packagesPath": "C:\\Users\\francisco\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\francisco\\repos\\creepto-bot\\TechnicalAnalysis.Tests\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\francisco\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -114,8 +108,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj": {
-                "projectPath": "C:\\Users\\franc\\source\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj"
+              "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj": {
+                "projectPath": "C:\\Users\\francisco\\repos\\creepto-bot\\CreeptoBot\\CreeptoBot.csproj"
               }
             }
           }
@@ -170,7 +164,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

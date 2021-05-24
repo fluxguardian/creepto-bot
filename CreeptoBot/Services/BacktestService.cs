@@ -29,7 +29,7 @@ namespace StrategyTester.Services
             _telegram.StartReceivingMessages(cancellationToken);
         }
 
-        private async Task RunTestAsync(string market, string candleSize = "1h", string strategyName = "maup")
+        private async Task RunTestAsync(string market, string candleSize, string strategyName)
         {
             var candles = (await _api.GetCandles(market, candleSize, 1000)).ToList();
 
@@ -52,13 +52,13 @@ namespace StrategyTester.Services
                     if (p.Direction == TradeDirection.Buy)
                     {
                         var percentage = i > 0 ? MathExtensions.PercentageDifference(strategy.Trades[i - 1].Volume, p.Volume) : 0;
-                        sb.AppendLine($"{p.TradeDate}: {p.Direction} >> {Math.Round(p.VolumeEur, 2)}EUR * {p.Price.Round(2)} = {p.Volume.Round(2)}SXP ({percentage.Round(2)}%)");
+                        sb.AppendLine($"{p.TradeDate}: {p.Direction} >> {Math.Round(p.VolumeEur, 2)}EUR * {p.Price.Round(2)} = {p.Volume.Round(2)}??? ({percentage.Round(2)}%)");
                     }
                     if (p.Direction == TradeDirection.Sell)
                     {
                         var percentage = i > 0 ? MathExtensions.PercentageDifference(strategy.Trades[i - 1].VolumeEur, p.VolumeEur) : 0;
 
-                        sb.AppendLine($"{p.TradeDate}: {p.Direction} >> {strategy.Trades[i - 1].Volume.Round(2)}SXP @ {p.Price.Round(2)} = {Math.Round(p.VolumeEur, 2)}EUR ({percentage.Round(2)}%)");
+                        sb.AppendLine($"{p.TradeDate}: {p.Direction} >> {strategy.Trades[i - 1].Volume.Round(2)}??? @ {p.Price.Round(2)} = {Math.Round(p.VolumeEur, 2)}EUR ({percentage.Round(2)}%)");
                     }
                 }
             }
@@ -74,13 +74,17 @@ namespace StrategyTester.Services
         private async void OnTelegramMessage(object sender, MessageReceivedEventArgs e)
         {
             var args = e.Message.Text.Split(' ');
+            if (args.Length < 3)
+            {
+                throw new ArgumentException("Invalid number of arguments. usage: RUN <market_name> <candle_size> <strategy_name>");
+            }
             switch (args[0])
             {
                 case RUN_MESSAGE:
                     await _telegram.SendMessageAsync("Starting test run...");
-                    var market = args.Length > 1 ? args[1] : "SXPEUR";
-                    var candleSize = args.Length > 2 ? args[2] : "1h";
-                    var strategyName = args.Length > 3 ? args[3] : "maup";
+                    var market = args[1];
+                    var candleSize = args[2];
+                    var strategyName = args[3];
 
                     await RunTestAsync(market, candleSize, strategyName);
 

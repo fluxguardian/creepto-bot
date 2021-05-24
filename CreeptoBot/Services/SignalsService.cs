@@ -75,12 +75,12 @@ namespace StrategyTester.Services
                             var p = runner2.Trades[i];
                             if (p.Direction == TradeDirection.Buy)
                             {
-                                await _telegram.SendMessageAsync($"Type: {p.Direction} >> {p.Volume}SXP @ {p.Price} = {Math.Round(p.VolumeEur, 2)}");
+                                await _telegram.SendMessageAsync($"Type: {p.Direction} >> {p.Volume}??? @ {p.Price} = {Math.Round(p.VolumeEur, 2)}");
                             }
                             if (p.Direction == TradeDirection.Sell)
                             {
                                 var percentage = (p.VolumeEur - runner2.Trades[i - 1].VolumeEur) / runner2.Trades[i - 1].VolumeEur * 100;
-                                await _telegram.SendMessageAsync($"Type: {p.Direction} >> {runner2.Trades[i - 1].Volume}SXP @ {p.Price} = {Math.Round(p.VolumeEur, 2)}EUR ({percentage}%)");
+                                await _telegram.SendMessageAsync($"Type: {p.Direction} >> {runner2.Trades[i - 1].Volume}??? @ {p.Price} = {Math.Round(p.VolumeEur, 2)}EUR ({percentage}%)");
                             }
                         }
                     }

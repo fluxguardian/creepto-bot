@@ -48,7 +48,7 @@ namespace StrategyTester.Services
 
             switch (args[1])
             {
-                case PNL_MESSAGE: //pnl pnl adaeur 1h maup
+                case PNL_MESSAGE: //signals pnl adaeur 1h maup
                     if (args.Length != 5)
                     {
                         await _telegram.SendMessageAsync($"PNL :: Invalid Number Of Arguments");
@@ -61,7 +61,7 @@ namespace StrategyTester.Services
                     }
 
                     break;
-                case TRADES_MESSAGE: //pnl trades adaeur 1h maup
+                case TRADES_MESSAGE: //signals trades adaeur 1h maup
                     if (args.Length != 5)
                     {
                         await _telegram.SendMessageAsync($"PNL :: Invalid Number Of Arguments");
@@ -106,7 +106,6 @@ namespace StrategyTester.Services
                     if (args.Length != 5)
                     {
                         await _telegram.SendMessageAsync($"ADD WATCH :: Invalid Number Of Arguments");
-
                         return;
                     }
 

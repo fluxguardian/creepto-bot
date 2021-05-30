@@ -20,14 +20,14 @@ namespace StrategyTester
 
         public event EventHandler<MessageReceivedEventArgs> OnMessageReceived;
 
-        public TelegramApi(IOptions<TelegramApiSettings> settingsOption, ILogger<TelegramApi> logger, string token)
+        public TelegramApi(TelegramApiSettings settings, ILogger<TelegramApi> logger)
         {
-            _client = new HttpClient()
+            _client = new HttpClient() // TODO: Use httpclient factory
             {
-                BaseAddress = new Uri(settingsOption.Value.ApiAddress)
+                BaseAddress = new Uri(settings.ApiAddress)
             };
-            _botToken = token;
-            _groupId = settingsOption.Value?.GroupId;
+            _botToken = settings.Token;
+            _groupId = settings.GroupId;
             _logger = logger;
         }
 

@@ -7,5 +7,7 @@
         public string ApiAddress { get; set; }
 
         public string GroupId { get; set; }
+
+        public string Token { get; set; }
     }
 }

@@ -42,12 +42,10 @@ namespace StrategyTester
 
                     sc.AddSingleton((sp) =>
                     {
-
-                        var options = sp.GetService<IOptions<TelegramApiSettings>>();
+                        var options = h.Configuration.GetSection("Telegram").Get<TelegramApiSettings>();
                         var logger = sp.GetService<ILogger<TelegramApi>>();
-                        var token = h.Configuration["Telegram:Token"];
 
-                        return new TelegramApi(options, logger, token);
+                        return new TelegramApi(options, logger);
                     });
 
                 })
